@@ -17,12 +17,22 @@ final class ArticlesViewModel: ObservableObject {
 
     @Published var articles: [AstronomyArticle] = []
     @Published var networkError: NetworkError?
-
-    //@MainActor
+    
+    var fromDate: String {
+        Date().changeDays(
+            by: -Constants.lastDaysCount
+        ).readable(format: Constants.apiDateFormat)
+    }
+    
+    var today: String {
+        Date().readable(format: Constants.apiDateFormat)
+    }
+    
+    @MainActor
     func getAsyncEvents() async {
         let endpoint = ArticlesEndpoint.recentArticles(
-            fromDate: "2024-06-16",
-            toDate: "2024-06-22"
+            fromDate: fromDate,
+            toDate: today
         )
         do {
             let articles = try await httpClient.asyncRequest(

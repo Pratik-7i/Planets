@@ -8,18 +8,19 @@
 import SwiftUI
 
 struct ArticleListView: View {
-    
+     
     @StateObject var viewModel = ArticlesViewModel()
               
     var body: some View {
         ScrollView {
-            Text("Error: \(viewModel.networkError?.localizedDescription)")
             LazyVStack(spacing: 12) {
                 ForEach(viewModel.articles) { article in
-                    Text("\(article.title)")
+                    ArticleView(article: article)
                 }
             }
         }
+        .padding(10)
+        .background(.screenBackground)
         .onAppear {
             Task {
                 await viewModel.getAsyncEvents()
