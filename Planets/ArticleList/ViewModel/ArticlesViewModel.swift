@@ -41,12 +41,12 @@ final class ArticlesViewModel: ObservableObject {
                 endpoint: endpoint,
                 responseModel: [AstronomyArticle].self
             )
-            self.articles = articles
+            self.articles = articles.reversed() // Recent will come up
             self.state = .success
         } catch let error as NetworkError {
-            self.state = .error(message: error.localizedDescription)
+            self.state = .error(error)
         } catch {
-            self.state = .error(message: error.localizedDescription)
+            self.state = .error(error)
         }
     }
 }

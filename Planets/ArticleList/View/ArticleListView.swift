@@ -12,30 +12,37 @@ struct ArticleListView: View {
     @StateObject var viewModel = ArticlesViewModel()
               
     var body: some View {
-        ScrollView {
-            LazyVStack(spacing: 12) {
-                ForEach(viewModel.articles) { article in
-                    ArticleView(article: article)
+        NavigationView {
+            ScrollView(showsIndicators: false) {
+                LazyVStack(spacing: 12) {
+                    ForEach(viewModel.articles) { article in
+                        NavigationLink {
+                            ArticleDetailView(article: article)
+                        } label: {
+                            ArticleView(article: article)
+                        }
+                    }
                 }
             }
-        }     
-        .padding(10)
-        .background(.screenBackground)
-        .onAppear {
-            Task {
-                await viewModel.fetchArticles()
+            .padding(10)
+            .background(.screenBackground)          
+            .navigationTitle("Recent Articles")
+            .onLoad {
+                Task {
+                    await viewModel.fetchArticles()
+                }
             }
-        }
-        .overlay {
-            if viewModel.state == .loading {
-                LoadingView()
-            }  
-            if case let .error(message) = viewModel.state {
-                ErrorView(message: message, onRetryTap: {
-                    Task {
-                        await viewModel.fetchArticles()
-                    }
-                })
+            .overlay {
+                if viewModel.state == .loading {
+                    LoadingView()
+                }
+                if case let .error(error) = viewModel.state {
+                    ErrorView(message: error.localizedDescription, onRetryTap: {
+                        Task {
+                            await viewModel.fetchArticles()
+                        }
+                    })
+                }
             }
         }
     }

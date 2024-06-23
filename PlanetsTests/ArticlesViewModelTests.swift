@@ -59,7 +59,7 @@ final class ArticlesViewModelTests: XCTestCase {
         // When
         await viewModel.fetchArticles()
         // Then
-        XCTAssertEqual(viewModel.networkError, NetworkError.decode)
+        XCTAssertEqual(viewModel.state, .error(NetworkError.decode))
     }
     
     override func tearDownWithError() throws {

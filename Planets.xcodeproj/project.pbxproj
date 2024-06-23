@@ -41,6 +41,9 @@
 		F9E1C3D62C2873B300186815 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1C3D52C2873B300186815 /* ErrorView.swift */; };
 		F9E1C3DA2C2876E300186815 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1C3D92C2876E300186815 /* LoadingView.swift */; };
 		F9E1C3DC2C287DC100186815 /* ArticleListState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1C3DB2C287DC100186815 /* ArticleListState.swift */; };
+		F9E1C3E12C288C9300186815 /* ViewDidLoadModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1C3E02C288C9300186815 /* ViewDidLoadModifier.swift */; };
+		F9E1C3E32C28920D00186815 /* ArticleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1C3E22C28920D00186815 /* ArticleDetailView.swift */; };
+		F9E1C3E52C28943D00186815 /* MediaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1C3E42C28943D00186815 /* MediaView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +105,9 @@
 		F9E1C3D52C2873B300186815 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		F9E1C3D92C2876E300186815 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		F9E1C3DB2C287DC100186815 /* ArticleListState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListState.swift; sourceTree = "<group>"; };
+		F9E1C3E02C288C9300186815 /* ViewDidLoadModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDidLoadModifier.swift; sourceTree = "<group>"; };
+		F9E1C3E22C28920D00186815 /* ArticleDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailView.swift; sourceTree = "<group>"; };
+		F9E1C3E42C28943D00186815 /* MediaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,6 +266,7 @@
 			children = (
 				F9E1C3B82C28306800186815 /* Date+Extension.swift */,
 				F9E1C3BC2C283A9300186815 /* String+Extension.swift */,
+				F9E1C3E02C288C9300186815 /* ViewDidLoadModifier.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -303,6 +310,8 @@
 			children = (
 				F9E1C3B32C282B4B00186815 /* ArticleView.swift */,
 				F9E1C3A42C28070D00186815 /* ArticleListView.swift */,
+				F9E1C3E22C28920D00186815 /* ArticleDetailView.swift */,
+				F9E1C3E42C28943D00186815 /* MediaView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -569,8 +578,11 @@
 				F9E1C3BD2C283A9300186815 /* String+Extension.swift in Sources */,
 				F9E1C3B42C282B4B00186815 /* ArticleView.swift in Sources */,
 				F9E1C3D62C2873B300186815 /* ErrorView.swift in Sources */,
+				F9E1C3E52C28943D00186815 /* MediaView.swift in Sources */,
 				F9E1C3692C27F9F500186815 /* PlanetsApp.swift in Sources */,
 				F9E1C3B22C282A2700186815 /* SDAsyncImage.swift in Sources */,
+				F9E1C3E32C28920D00186815 /* ArticleDetailView.swift in Sources */,
+				F9E1C3E12C288C9300186815 /* ViewDidLoadModifier.swift in Sources */,
 				F9E1C3982C2805D800186815 /* Endpoint.swift in Sources */,
 				F9E1C39A2C2805F100186815 /* Constants.swift in Sources */,
 			);

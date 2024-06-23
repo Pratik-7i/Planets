@@ -23,6 +23,7 @@ struct SDAsyncImage: View {
                 .frame(width: proxy.size.width, height: proxy.size.height)
                 .cornerRadius(roundCorner)
                 .transition(.fade(duration: 0.65))
+                .background(.imageBackground)
         }
     }
 }

@@ -10,7 +10,7 @@ import Foundation
 enum ArticleListState {
     case loading
     case success
-    case error(message: String)
+    case error(_ error: Error)
 }
 
 extension ArticleListState: Equatable

@@ -16,7 +16,7 @@ extension ArticlesEndpoint: Endpoint
     var path: String {
         switch self {
         case .recentArticles:
-            return "/planetary/apod"
+            return "/planetary/apod123"
         }
     }
     
