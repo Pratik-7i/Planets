@@ -9,19 +9,20 @@ import Foundation
 
 final class ArticlesViewModel: ObservableObject {
 
+    @Published var articles: [AstronomyArticle] = []
+    @Published var state: ArticleListState?
+
     let httpClient: HTTPProtocol
 
     init(httpClient: HTTPProtocol = HTTPClient()) {
         self.httpClient = httpClient
     }
-
-    @Published var articles: [AstronomyArticle] = []
-    @Published var networkError: NetworkError?
     
     var fromDate: String {
-        Date().changeDays(
+        let date = Date().changeDays(
             by: -Constants.lastDaysCount
-        ).readable(format: Constants.apiDateFormat)
+        )
+        return date.readable(format: Constants.apiDateFormat)
     }
     
     var today: String {
@@ -30,6 +31,7 @@ final class ArticlesViewModel: ObservableObject {
     
     @MainActor
     func fetchArticles() async {
+        self.state = .loading
         let endpoint = ArticlesEndpoint.recentArticles(
             fromDate: fromDate,
             toDate: today
@@ -40,10 +42,11 @@ final class ArticlesViewModel: ObservableObject {
                 responseModel: [AstronomyArticle].self
             )
             self.articles = articles
+            self.state = .success
         } catch let error as NetworkError {
-            self.networkError = error
+            self.state = .error(message: error.localizedDescription)
         } catch {
-            self.networkError = .unknown
+            self.state = .error(message: error.localizedDescription)
         }
     }
 }

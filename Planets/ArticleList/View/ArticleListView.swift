@@ -18,12 +18,24 @@ struct ArticleListView: View {
                     ArticleView(article: article)
                 }
             }
-        }
+        }     
         .padding(10)
         .background(.screenBackground)
         .onAppear {
             Task {
                 await viewModel.fetchArticles()
+            }
+        }
+        .overlay {
+            if viewModel.state == .loading {
+                LoadingView()
+            }  
+            if case let .error(message) = viewModel.state {
+                ErrorView(message: message, onRetryTap: {
+                    Task {
+                        await viewModel.fetchArticles()
+                    }
+                })
             }
         }
     }

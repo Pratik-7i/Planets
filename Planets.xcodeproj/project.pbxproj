@@ -38,6 +38,9 @@
 		F9E1C3CE2C28674900186815 /* XCTestCase+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1C3CC2C28674900186815 /* XCTestCase+Extension.swift */; };
 		F9E1C3D02C2868FD00186815 /* MockArticleList.json in Resources */ = {isa = PBXBuildFile; fileRef = F9E1C3CF2C2868FD00186815 /* MockArticleList.json */; };
 		F9E1C3D42C286F0E00186815 /* MockArticleInvalid.json in Resources */ = {isa = PBXBuildFile; fileRef = F9E1C3D32C286F0E00186815 /* MockArticleInvalid.json */; };
+		F9E1C3D62C2873B300186815 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1C3D52C2873B300186815 /* ErrorView.swift */; };
+		F9E1C3DA2C2876E300186815 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1C3D92C2876E300186815 /* LoadingView.swift */; };
+		F9E1C3DC2C287DC100186815 /* ArticleListState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1C3DB2C287DC100186815 /* ArticleListState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +99,9 @@
 		F9E1C3CC2C28674900186815 /* XCTestCase+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Extension.swift"; sourceTree = "<group>"; };
 		F9E1C3CF2C2868FD00186815 /* MockArticleList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MockArticleList.json; sourceTree = "<group>"; };
 		F9E1C3D32C286F0E00186815 /* MockArticleInvalid.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MockArticleInvalid.json; sourceTree = "<group>"; };
+		F9E1C3D52C2873B300186815 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		F9E1C3D92C2876E300186815 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		F9E1C3DB2C287DC100186815 /* ArticleListState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,12 +180,12 @@
 		F9E1C3672C27F9F500186815 /* Planets */ = {
 			isa = PBXGroup;
 			children = (
-				F9E1C3B92C28306800186815 /* Extensions */,
-				F9E1C3B52C282B6F00186815 /* ReusableView */,
 				F9E1C3682C27F9F500186815 /* PlanetsApp.swift */,
 				F9E1C3992C2805F100186815 /* Constants.swift */,
 				F9E1C3922C2801EE00186815 /* Networking */,
 				F9E1C39D2C28065D00186815 /* ArticleList */,
+				F9E1C3B52C282B6F00186815 /* ReusableView */,
+				F9E1C3B92C28306800186815 /* Extensions */,
 				F9E1C36C2C27F9F600186815 /* Assets.xcassets */,
 				F9E1C3B62C282BF100186815 /* Colors.xcassets */,
 				F9E1C36E2C27F9F600186815 /* Preview Content */,
@@ -230,11 +236,11 @@
 		F9E1C39D2C28065D00186815 /* ArticleList */ = {
 			isa = PBXGroup;
 			children = (
-				F9E1C39E2C28067D00186815 /* AstronomyArticle.swift */,
 				F9E1C3A02C28069700186815 /* ArticlesEndpoint.swift */,
-				F9E1C3A22C2806DD00186815 /* ArticlesViewModel.swift */,
-				F9E1C3B32C282B4B00186815 /* ArticleView.swift */,
-				F9E1C3A42C28070D00186815 /* ArticleListView.swift */,
+				F9E1C3DB2C287DC100186815 /* ArticleListState.swift */,
+				F9E1C3DD2C287DE000186815 /* Model */,
+				F9E1C3DE2C287DEC00186815 /* View */,
+				F9E1C3DF2C287DF200186815 /* ViewModel */,
 			);
 			path = ArticleList;
 			sourceTree = "<group>";
@@ -243,6 +249,8 @@
 			isa = PBXGroup;
 			children = (
 				F9E1C3B12C282A2700186815 /* SDAsyncImage.swift */,
+				F9E1C3D52C2873B300186815 /* ErrorView.swift */,
+				F9E1C3D92C2876E300186815 /* LoadingView.swift */,
 			);
 			path = ReusableView;
 			sourceTree = "<group>";
@@ -280,6 +288,31 @@
 				F9E1C3CC2C28674900186815 /* XCTestCase+Extension.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		F9E1C3DD2C287DE000186815 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F9E1C39E2C28067D00186815 /* AstronomyArticle.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F9E1C3DE2C287DEC00186815 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F9E1C3B32C282B4B00186815 /* ArticleView.swift */,
+				F9E1C3A42C28070D00186815 /* ArticleListView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F9E1C3DF2C287DF200186815 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F9E1C3A22C2806DD00186815 /* ArticlesViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -528,11 +561,14 @@
 				F9E1C3BA2C28306800186815 /* Date+Extension.swift in Sources */,
 				F9E1C3A32C2806DD00186815 /* ArticlesViewModel.swift in Sources */,
 				F9E1C39F2C28067D00186815 /* AstronomyArticle.swift in Sources */,
+				F9E1C3DA2C2876E300186815 /* LoadingView.swift in Sources */,
+				F9E1C3DC2C287DC100186815 /* ArticleListState.swift in Sources */,
 				F9E1C3A12C28069700186815 /* ArticlesEndpoint.swift in Sources */,
 				F9E1C3962C2805B700186815 /* RequestEnum.swift in Sources */,
 				F9E1C39C2C28061F00186815 /* HTTPClient.swift in Sources */,
 				F9E1C3BD2C283A9300186815 /* String+Extension.swift in Sources */,
 				F9E1C3B42C282B4B00186815 /* ArticleView.swift in Sources */,
+				F9E1C3D62C2873B300186815 /* ErrorView.swift in Sources */,
 				F9E1C3692C27F9F500186815 /* PlanetsApp.swift in Sources */,
 				F9E1C3B22C282A2700186815 /* SDAsyncImage.swift in Sources */,
 				F9E1C3982C2805D800186815 /* Endpoint.swift in Sources */,
