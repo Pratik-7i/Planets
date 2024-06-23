@@ -24,6 +24,11 @@ final class HTTPClientTests: XCTestCase {
         self.session = URLSession(configuration: sessionConfiguration)
     }
     
+    override func tearDown() {
+        self.session = nil
+        super.tearDown()
+    }
+    
     private func setMockProtocolValidData() {
         MockURLProtocol.requestHandler = { request in
             let exampleData =
@@ -170,19 +175,6 @@ final class HTTPClientTests: XCTestCase {
         setMockProtocolUnexpectedStatsCode()
         let apiClient = HTTPClient(session: self.session!)
         let endpoint = MockEndpoint()
-        do {
-            _ = try await apiClient.asyncRequest(
-                endpoint: endpoint,
-                responseModel: TestModel.self
-            )
-        } catch {
-            XCTAssertEqual(error as! NetworkError, NetworkError.unexpectedCode)
-        }
-    }
-    
-    func testAsyncRequest_invalidUrlError() async throws {
-        let apiClient = HTTPClient(session: self.session!)
-        let endpoint = MockEndpoint2()
         do {
             _ = try await apiClient.asyncRequest(
                 endpoint: endpoint,

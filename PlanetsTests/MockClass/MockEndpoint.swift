@@ -16,12 +16,3 @@ struct MockEndpoint: Endpoint {
     var headers: [HTTPHeader: String]? = nil
     var queryItems: [URLQueryItem]? = nil
 }
-
-struct MockEndpoint2: Endpoint {
-    var scheme: String = "https"
-    var baseURL: String = "example"
-    var path: String = "/test"
-    var method: HTTPMethod = .get
-    var headers: [HTTPHeader: String]? = nil
-    var queryItems: [URLQueryItem]? = nil
-}

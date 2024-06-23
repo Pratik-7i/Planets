@@ -29,7 +29,7 @@ final class ArticlesViewModel: ObservableObject {
     }
     
     @MainActor
-    func getAsyncEvents() async {
+    func fetchArticles() async {
         let endpoint = ArticlesEndpoint.recentArticles(
             fromDate: fromDate,
             toDate: today

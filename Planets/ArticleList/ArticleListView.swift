@@ -23,7 +23,7 @@ struct ArticleListView: View {
         .background(.screenBackground)
         .onAppear {
             Task {
-                await viewModel.getAsyncEvents()
+                await viewModel.fetchArticles()
             }
         }
     }
