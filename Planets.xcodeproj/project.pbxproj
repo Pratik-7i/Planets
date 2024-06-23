@@ -14,6 +14,7 @@
 		F9E1C37A2C27F9F600186815 /* PlanetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1C3792C27F9F600186815 /* PlanetsTests.swift */; };
 		F9E1C3842C27F9F600186815 /* PlanetsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1C3832C27F9F600186815 /* PlanetsUITests.swift */; };
 		F9E1C3862C27F9F600186815 /* PlanetsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1C3852C27F9F600186815 /* PlanetsUITestsLaunchTests.swift */; };
+		F9E1C3942C28020500186815 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1C3932C28020500186815 /* NetworkError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		F9E1C37F2C27F9F600186815 /* PlanetsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlanetsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9E1C3832C27F9F600186815 /* PlanetsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsUITests.swift; sourceTree = "<group>"; };
 		F9E1C3852C27F9F600186815 /* PlanetsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F9E1C3932C28020500186815 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 		F9E1C3672C27F9F500186815 /* Planets */ = {
 			isa = PBXGroup;
 			children = (
+				F9E1C3922C2801EE00186815 /* Networking */,
 				F9E1C3682C27F9F500186815 /* PlanetsApp.swift */,
 				F9E1C36A2C27F9F500186815 /* ContentView.swift */,
 				F9E1C36C2C27F9F600186815 /* Assets.xcassets */,
@@ -125,6 +128,14 @@
 				F9E1C3852C27F9F600186815 /* PlanetsUITestsLaunchTests.swift */,
 			);
 			path = PlanetsUITests;
+			sourceTree = "<group>";
+		};
+		F9E1C3922C2801EE00186815 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				F9E1C3932C28020500186815 /* NetworkError.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9E1C3942C28020500186815 /* NetworkError.swift in Sources */,
 				F9E1C36B2C27F9F500186815 /* ContentView.swift in Sources */,
 				F9E1C3692C27F9F500186815 /* PlanetsApp.swift in Sources */,
 			);
