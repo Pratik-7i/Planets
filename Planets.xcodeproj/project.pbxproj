@@ -8,13 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		F9E1C3692C27F9F500186815 /* PlanetsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1C3682C27F9F500186815 /* PlanetsApp.swift */; };
-		F9E1C36B2C27F9F500186815 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1C36A2C27F9F500186815 /* ContentView.swift */; };
 		F9E1C36D2C27F9F600186815 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9E1C36C2C27F9F600186815 /* Assets.xcassets */; };
 		F9E1C3702C27F9F600186815 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9E1C36F2C27F9F600186815 /* Preview Assets.xcassets */; };
 		F9E1C37A2C27F9F600186815 /* PlanetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1C3792C27F9F600186815 /* PlanetsTests.swift */; };
 		F9E1C3842C27F9F600186815 /* PlanetsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1C3832C27F9F600186815 /* PlanetsUITests.swift */; };
 		F9E1C3862C27F9F600186815 /* PlanetsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1C3852C27F9F600186815 /* PlanetsUITestsLaunchTests.swift */; };
 		F9E1C3942C28020500186815 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1C3932C28020500186815 /* NetworkError.swift */; };
+		F9E1C3962C2805B700186815 /* RequestEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1C3952C2805B700186815 /* RequestEnum.swift */; };
+		F9E1C3982C2805D800186815 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1C3972C2805D800186815 /* Endpoint.swift */; };
+		F9E1C39A2C2805F100186815 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1C3992C2805F100186815 /* Constants.swift */; };
+		F9E1C39C2C28061F00186815 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1C39B2C28061F00186815 /* HTTPClient.swift */; };
+		F9E1C39F2C28067D00186815 /* AstronomyArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1C39E2C28067D00186815 /* AstronomyArticle.swift */; };
+		F9E1C3A12C28069700186815 /* ArticlesEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1C3A02C28069700186815 /* ArticlesEndpoint.swift */; };
+		F9E1C3A32C2806DD00186815 /* ArticlesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1C3A22C2806DD00186815 /* ArticlesViewModel.swift */; };
+		F9E1C3A52C28070D00186815 /* ArticleListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1C3A42C28070D00186815 /* ArticleListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +44,6 @@
 /* Begin PBXFileReference section */
 		F9E1C3652C27F9F500186815 /* Planets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Planets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9E1C3682C27F9F500186815 /* PlanetsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsApp.swift; sourceTree = "<group>"; };
-		F9E1C36A2C27F9F500186815 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F9E1C36C2C27F9F600186815 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F9E1C36F2C27F9F600186815 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F9E1C3752C27F9F600186815 /* PlanetsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlanetsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,6 +52,14 @@
 		F9E1C3832C27F9F600186815 /* PlanetsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsUITests.swift; sourceTree = "<group>"; };
 		F9E1C3852C27F9F600186815 /* PlanetsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F9E1C3932C28020500186815 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		F9E1C3952C2805B700186815 /* RequestEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestEnum.swift; sourceTree = "<group>"; };
+		F9E1C3972C2805D800186815 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		F9E1C3992C2805F100186815 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F9E1C39B2C28061F00186815 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		F9E1C39E2C28067D00186815 /* AstronomyArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyArticle.swift; sourceTree = "<group>"; };
+		F9E1C3A02C28069700186815 /* ArticlesEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesEndpoint.swift; sourceTree = "<group>"; };
+		F9E1C3A22C2806DD00186815 /* ArticlesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesViewModel.swift; sourceTree = "<group>"; };
+		F9E1C3A42C28070D00186815 /* ArticleListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,9 +110,10 @@
 		F9E1C3672C27F9F500186815 /* Planets */ = {
 			isa = PBXGroup;
 			children = (
-				F9E1C3922C2801EE00186815 /* Networking */,
 				F9E1C3682C27F9F500186815 /* PlanetsApp.swift */,
-				F9E1C36A2C27F9F500186815 /* ContentView.swift */,
+				F9E1C3992C2805F100186815 /* Constants.swift */,
+				F9E1C3922C2801EE00186815 /* Networking */,
+				F9E1C39D2C28065D00186815 /* ArticleList */,
 				F9E1C36C2C27F9F600186815 /* Assets.xcassets */,
 				F9E1C36E2C27F9F600186815 /* Preview Content */,
 			);
@@ -134,8 +149,22 @@
 			isa = PBXGroup;
 			children = (
 				F9E1C3932C28020500186815 /* NetworkError.swift */,
+				F9E1C3952C2805B700186815 /* RequestEnum.swift */,
+				F9E1C3972C2805D800186815 /* Endpoint.swift */,
+				F9E1C39B2C28061F00186815 /* HTTPClient.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		F9E1C39D2C28065D00186815 /* ArticleList */ = {
+			isa = PBXGroup;
+			children = (
+				F9E1C39E2C28067D00186815 /* AstronomyArticle.swift */,
+				F9E1C3A02C28069700186815 /* ArticlesEndpoint.swift */,
+				F9E1C3A22C2806DD00186815 /* ArticlesViewModel.swift */,
+				F9E1C3A42C28070D00186815 /* ArticleListView.swift */,
+			);
+			path = ArticleList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,8 +298,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9E1C3942C28020500186815 /* NetworkError.swift in Sources */,
-				F9E1C36B2C27F9F500186815 /* ContentView.swift in Sources */,
+				F9E1C3A52C28070D00186815 /* ArticleListView.swift in Sources */,
+				F9E1C3A32C2806DD00186815 /* ArticlesViewModel.swift in Sources */,
+				F9E1C39F2C28067D00186815 /* AstronomyArticle.swift in Sources */,
+				F9E1C3A12C28069700186815 /* ArticlesEndpoint.swift in Sources */,
+				F9E1C3962C2805B700186815 /* RequestEnum.swift in Sources */,
+				F9E1C39C2C28061F00186815 /* HTTPClient.swift in Sources */,
 				F9E1C3692C27F9F500186815 /* PlanetsApp.swift in Sources */,
+				F9E1C3982C2805D800186815 /* Endpoint.swift in Sources */,
+				F9E1C39A2C2805F100186815 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +477,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -469,6 +506,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -490,7 +528,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Pratik.PlanetsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -509,7 +547,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Pratik.PlanetsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -527,6 +565,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Pratik.PlanetsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -544,6 +583,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Pratik.PlanetsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
