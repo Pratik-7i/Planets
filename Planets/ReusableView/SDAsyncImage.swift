@@ -9,8 +9,8 @@ import SwiftUI
 import SDWebImage
 import SDWebImageSwiftUI
 
-struct SDAsyncImage: View
-{
+struct SDAsyncImage: View {
+    
     var roundCorner: CGFloat = 0
     var url: String
     
@@ -28,6 +28,8 @@ struct SDAsyncImage: View
 }
 
 #Preview {
-    SDAsyncImage(url: "https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/1529/571529-v")
+    SDAsyncImage(
+        url: "https://apod.nasa.gov/apod/image/2406/SquidOu4_Linde_960.jpg"
+    )
 }
 

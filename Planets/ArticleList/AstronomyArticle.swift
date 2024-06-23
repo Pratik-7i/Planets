@@ -24,6 +24,7 @@ struct AstronomyArticle: Identifiable {
 }
 
 extension AstronomyArticle: Codable {
+    
     enum CodingKeys: String, CodingKey {
         case title
         case explanation
@@ -47,13 +48,16 @@ extension AstronomyArticle: Codable {
 }
 
 extension AstronomyArticle {
+    
     var publishDate: String {
         guard let date = dateString.toDate(format: Constants.apiDateFormat) else { return "" }
         return date.timeAgo
     }
+    
     var contentType: MediaType {
         return self.mediaType == "video" ? .video : .image
     }
+    
     var thumbUrl: String {
         if contentType == .video {
             guard let url = mediaUrl.split(separator: "?").first else { return "" }

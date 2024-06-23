@@ -16,12 +16,17 @@ protocol HTTPProtocol {
 
 final class HTTPClient: HTTPProtocol
 {
-    var session: URLSession {
+    var session: URLSession
+
+    convenience init() {
         let configuration = URLSessionConfiguration.default
         configuration.waitsForConnectivity = true
         configuration.timeoutIntervalForRequest = 60
-        //configuration.timeoutIntervalForResource = 300
-        return URLSession(configuration: configuration)
+        self.init(session: URLSession(configuration: configuration))
+    }
+    
+    init(session: URLSession) {
+        self.session = session
     }
     
     func asyncRequest<T: Decodable>(

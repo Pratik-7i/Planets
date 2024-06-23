@@ -11,7 +11,7 @@ struct Constants {
     static let baseURL = BaseURL.development
     static let apiKey = "DEMO_KEY"
     static let apiDateFormat = "yyyy-MM-dd"
-    static let lastDaysCount = 7 // Today is included, so it will be 6+1 = 7 days
+    static let lastDaysCount = 6 // Today is included, so it will be 6+1 --> last 7 days
 }
 
 /**

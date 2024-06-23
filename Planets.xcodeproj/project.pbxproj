@@ -13,7 +13,6 @@
 		F9E1C3692C27F9F500186815 /* PlanetsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1C3682C27F9F500186815 /* PlanetsApp.swift */; };
 		F9E1C36D2C27F9F600186815 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9E1C36C2C27F9F600186815 /* Assets.xcassets */; };
 		F9E1C3702C27F9F600186815 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9E1C36F2C27F9F600186815 /* Preview Assets.xcassets */; };
-		F9E1C37A2C27F9F600186815 /* PlanetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1C3792C27F9F600186815 /* PlanetsTests.swift */; };
 		F9E1C3842C27F9F600186815 /* PlanetsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1C3832C27F9F600186815 /* PlanetsUITests.swift */; };
 		F9E1C3862C27F9F600186815 /* PlanetsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1C3852C27F9F600186815 /* PlanetsUITestsLaunchTests.swift */; };
 		F9E1C3942C28020500186815 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1C3932C28020500186815 /* NetworkError.swift */; };
@@ -32,6 +31,9 @@
 		F9E1C3BB2C28306800186815 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1C3B82C28306800186815 /* Date+Extension.swift */; };
 		F9E1C3BD2C283A9300186815 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1C3BC2C283A9300186815 /* String+Extension.swift */; };
 		F9E1C3BE2C283A9300186815 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1C3BC2C283A9300186815 /* String+Extension.swift */; };
+		F9E1C3C32C28499200186815 /* HTTPClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1C3C22C28499200186815 /* HTTPClientTests.swift */; };
+		F9E1C3C72C2849D000186815 /* MockEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1C3C52C2849D000186815 /* MockEndpoint.swift */; };
+		F9E1C3C92C285CB200186815 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1C3BF2C2847CC00186815 /* MockURLProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,7 +68,6 @@
 		F9E1C36C2C27F9F600186815 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F9E1C36F2C27F9F600186815 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F9E1C3752C27F9F600186815 /* PlanetsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlanetsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F9E1C3792C27F9F600186815 /* PlanetsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsTests.swift; sourceTree = "<group>"; };
 		F9E1C37F2C27F9F600186815 /* PlanetsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlanetsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9E1C3832C27F9F600186815 /* PlanetsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsUITests.swift; sourceTree = "<group>"; };
 		F9E1C3852C27F9F600186815 /* PlanetsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -84,6 +85,9 @@
 		F9E1C3B62C282BF100186815 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		F9E1C3B82C28306800186815 /* Date+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		F9E1C3BC2C283A9300186815 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		F9E1C3BF2C2847CC00186815 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
+		F9E1C3C22C28499200186815 /* HTTPClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientTests.swift; sourceTree = "<group>"; };
+		F9E1C3C52C2849D000186815 /* MockEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockEndpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,7 +190,8 @@
 		F9E1C3782C27F9F600186815 /* PlanetsTests */ = {
 			isa = PBXGroup;
 			children = (
-				F9E1C3792C27F9F600186815 /* PlanetsTests.swift */,
+				F9E1C3C42C2849BB00186815 /* MockClass */,
+				F9E1C3C22C28499200186815 /* HTTPClientTests.swift */,
 			);
 			path = PlanetsTests;
 			sourceTree = "<group>";
@@ -238,6 +243,15 @@
 				F9E1C3BC2C283A9300186815 /* String+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F9E1C3C42C2849BB00186815 /* MockClass */ = {
+			isa = PBXGroup;
+			children = (
+				F9E1C3BF2C2847CC00186815 /* MockURLProtocol.swift */,
+				F9E1C3C52C2849D000186815 /* MockEndpoint.swift */,
+			);
+			path = MockClass;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -500,8 +514,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9E1C37A2C27F9F600186815 /* PlanetsTests.swift in Sources */,
 				F9E1C3BE2C283A9300186815 /* String+Extension.swift in Sources */,
+				F9E1C3C72C2849D000186815 /* MockEndpoint.swift in Sources */,
+				F9E1C3C92C285CB200186815 /* MockURLProtocol.swift in Sources */,
+				F9E1C3C32C28499200186815 /* HTTPClientTests.swift in Sources */,
 				F9E1C3BB2C28306800186815 /* Date+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
