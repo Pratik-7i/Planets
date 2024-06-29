@@ -23,7 +23,7 @@ This is an iOS App which shows the best Astronomy pics of the week.
 
 ## What is covered
 - Astronomy articles of last 7 days
-- Detail screen which show the same article
+- Detail screen which shows the selected article
 - Generic Testable network layer (Mock URLProtocol)
 - Unit Test Cases
 - Error handling with human readable message, retry on error
