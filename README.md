@@ -18,10 +18,11 @@ This is an iOS App which shows the best Astronomy pics of the week.
 - User interface: **SwiftUI**
 - Code architecture: **MVVM**
 - `async await` is used for concurrency
+-  I have used `throw` as method of error handling. No more `Result` enums 
 - `Swift Packgae Manager` (SPM) is used to manage project dependencies
 
 ## What is covered
-- Astronomy articles of last 7 dats
+- Astronomy articles of last 7 days
 - Detail screen which show the same article
 - Generic Testable network layer (Mock URLProtocol)
 - Unit Test Cases
